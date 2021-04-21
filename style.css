@@ -19,14 +19,15 @@ li {
 }
 
 li:hover {
-  color: #0000ee;
+  /* color: #0000ee; */
+  font-weight: bold;
 }
 
 /* Header section */
 
 header {
   /* border: 3px solid green; */
-  background: linear-gradient(90deg, skyblue, white);
+  background-color: skyblue;
 
   display: grid;
   grid-auto-flow: column;
@@ -56,8 +57,10 @@ header .nav li:hover {
   color: blue;
   border: 2px solid blue;
 }
-.sign-in:hover {
-  color: white;
+.sign-in li:hover,
+.sign-in:hover,
+.sign-in:hover li {
+  color: #fff;
   background-color: blue;
 }
 
@@ -65,21 +68,53 @@ header .nav li:hover {
   color: darkblue;
   border: 2px solid darkblue;
 }
-.sign-up:hover {
+.sign-up li:hover,
+.sign-up:hover,
+.sign-up:hover li {
   color: white;
   background-color: darkblue;
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 200px 1fr;
 
-  margin-right: 4rem;
-  margin-left: 4rem;
+  margin-right: 6rem;
+  margin-left: 6rem;
 
   grid-gap: 10px;
 
   padding: 10px;
+}
+
+/* Welcome section */
+
+article.welcome {
+  color: white;
+  background: linear-gradient(90deg, black, purple);
+
+  display: grid;
+  gap: 20px;
+
+  place-items: center;
+
+  padding: 50px;
+}
+
+.welcome h1 {
+  font-size: 8rem;
+  text-align: center;
+}
+
+.welcome p {
+  margin-bottom: 4rem;
+}
+
+.welcome h1,
+.welcome h2,
+.welcome p {
+  margin-right: 6rem;
+  margin-left: 6rem;
 }
 
 /* aside section */
@@ -105,13 +140,60 @@ aside {
 /* Main section */
 
 main {
-  border: 3px solid cyan;
+  display: grid;
+  grid-auto-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+main .card {
+  padding: 10px;
+
+  border: 2px solid red;
+
+  display: grid;
+  grid-template:
+    "img info" auto /
+    auto 1fr;
+
+  grid-gap: 10px;
+
+  /* place-items: center; */
+}
+
+main .card .img .game-logo {
+  grid-area: img;
+  height: 10px;
+}
+main .card .info {
+  grid-area: info;
+}
+
+main .card .info {
+  display: grid;
+  grid-template:
+    "h2" auto
+    "h3" auto
+    "stats" auto/
+    1fr;
+}
+
+main .card .info h2 {
+  grid-area: h2;
+}
+
+main .card .info h3 {
+  grid-area: h3;
+}
+
+main .card .info .stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: repeat(1fr);
 }
 
 /* Footer section */
 
 footer {
-  background: linear-gradient(90deg, skyblue, white);
+  background-color: skyblue;
 
   display: grid;
   grid-auto-rows: auto;
