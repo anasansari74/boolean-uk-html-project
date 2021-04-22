@@ -5,8 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign In</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="sign-in.css" />
   </head>
   <body>
-    <h1>Welcome to the sign in page</h1>
+    <header>
+      <a href="index.html"
+        ><img src="assets/images/Game rater logo.png" alt="logo"
+      /></a>
+      <ul class="nav">
+        <a href="#"><li>Trending</li></a>
+        <a href="#"><li>Discover</li></a>
+        <a href="#"><li>Genres</li></a>
+        <a href="#"><li>Bookmarks</li></a>
+        <a href="#support"><li>Support</li></a>
+      </ul>
+      <ul>
+        <a href="sign-in.html" class="sign-in sign"><li>Sign In</li></a>
+        <a href="sign-up.html" class="sign-up sign"><li>Sign Up</li></a>
+      </ul>
+    </header>
+    <h1>Sign-In</h1>
+    <article class="center sign-in-box">
+      <p>Sign in with:</p>
+      <section class="sign-in-options">
+        <ul>
+          <li>
+            <a href="#">
+              <img
+                src="/Game Rater Project/assets/images/search.png"
+                alt="google logo"
+              />
+              Google
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="/Game Rater Project/assets/images/apple.png"
+                alt="apple logo"
+              />
+              Apple
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="/Game Rater Project/assets/images/facebook.png"
+                alt="facebook logo"
+              />
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="/Game Rater Project/assets/images/twitter.png"
+                alt="twitter logo"
+              />
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </section>
+      <p>Or</p>
+      <form action="" method="get" class="form">
+        <div class="form-element">
+          <label for="name">Username </label>
+          <input type="text" name="name" class="input-box" required />
+        </div>
+        <div class="form-element">
+          <label for="email">Password </label>
+          <input type="password" name="password" class="input-box" required />
+        </div>
+      </form>
+      <div class="stay-signed-in">
+        <input
+          type="checkbox"
+          id="stay-signed-in"
+          name="stay-signed-in"
+          checked
+        />
+        <label for="stay-signed-in">Always stay signed in?</label>
+      </div>
+      <a href="#"><h1>Sign-in</h1></a>
+    </article>
   </body>
 </html>

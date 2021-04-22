@@ -1,0 +1,18 @@
+* {
+  line-height: 2rem;
+}
+
+.game {
+  margin: 2rem 6rem;
+
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.rating,
+.ranked,
+.popularity,
+.members {
+  font-size: 3rem;
+  color: crimson;
+}

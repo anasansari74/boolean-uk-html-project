@@ -12,15 +12,7 @@ a,
 li {
   text-decoration: none;
   list-style-type: none;
-}
-
-li {
   color: black;
-}
-
-li:hover {
-  /* color: #0000ee; */
-  font-weight: bold;
 }
 
 /* Header section */
@@ -75,23 +67,11 @@ header .nav li:hover {
   background-color: darkblue;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-
-  margin-right: 6rem;
-  margin-left: 6rem;
-
-  grid-gap: 10px;
-
-  padding: 10px;
-}
-
 /* Welcome section */
 
 article.welcome {
   color: white;
-  background: linear-gradient(90deg, black, purple);
+  background: linear-gradient(90deg, royalblue, purple);
 
   display: grid;
   gap: 20px;
@@ -119,6 +99,19 @@ article.welcome {
 
 /* aside section */
 
+.wrapper {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+
+  /* margin-right: 4rem;
+  margin-left: 4rem; */
+  margin: 2rem 4rem 4rem 4rem;
+
+  grid-gap: 10px;
+
+  padding: 10px;
+}
+
 aside {
   display: grid;
   grid-auto-rows: auto 1fr;
@@ -141,13 +134,18 @@ aside {
 
 main {
   display: grid;
-  grid-auto-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: auto auto;
+
+  grid-gap: 10px;
 }
 
 main .card {
   padding: 10px;
 
-  border: 2px solid red;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+
+  box-shadow: 1px 1px 1px 0 gray;
 
   display: grid;
   grid-template:
@@ -156,38 +154,85 @@ main .card {
 
   grid-gap: 10px;
 
-  /* place-items: center; */
+  background-color: white;
+
+  width: fit-content;
 }
 
-main .card .img .game-logo {
+main .card img {
   grid-area: img;
-  height: 10px;
+
+  border-radius: 10px;
 }
+
 main .card .info {
   grid-area: info;
-}
-
-main .card .info {
   display: grid;
   grid-template:
-    "h2" auto
-    "h3" auto
-    "stats" auto/
+    "card-heading" auto
+    "stats" auto
+    "rate" auto/
     1fr;
+
+  place-items: center;
 }
 
-main .card .info h2 {
-  grid-area: h2;
+main .card .info .card-heading {
+  grid-area: card-heading;
 }
 
-main .card .info h3 {
-  grid-area: h3;
+main .card .rate {
+  grid-area: rate;
 }
 
 main .card .info .stats {
   grid-area: stats;
+
   display: grid;
-  grid-template-columns: repeat(1fr);
+  grid-template:
+    "rating ranked popularity members rate" auto/
+    auto auto auto auto auto;
+
+  place-items: center;
+}
+
+.card .rating {
+  grid-area: rating;
+}
+
+.card .ranked {
+  grid-area: ranked;
+}
+
+.card .popularity {
+  grid-area: popularity;
+}
+
+.card .members {
+  grid-area: members;
+}
+
+.card .rate {
+  grid-area: rate;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  padding: 10px;
+
+  width: 100%;
+
+  background: linear-gradient(90deg, skyblue, lime);
+}
+
+main .stats ul {
+  padding: 0 5px;
+}
+
+main .border-right {
+  border-right: 1px solid darkblue;
 }
 
 /* Footer section */
